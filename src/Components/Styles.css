@@ -1,0 +1,142 @@
+body {
+  background-color: hsl(228, 33%, 97%);
+}
+p {
+  font-family: "Rubik", sans-serif;
+}
+
+.page-body {
+  width: 50%;
+  margin: 1% auto;
+}
+
+.userProfile, .profile {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* .profile {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+} */
+.avater {
+  width: 30px;
+  height: 30px;
+}
+.profile p {
+  margin: 0 12px;
+}
+.username{
+    font-weight: bolder;
+    color: hsl(212, 24%, 26%);
+}
+.time{
+    color: hsl(211, 10%, 45%);
+}
+
+.comment{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.comment .commentContent {
+  /* background-color: red; */
+  width: 93%;
+}
+.reply-comment  .commentContent {
+    /* background-color: red; */
+    width: 90%;
+  }
+.reply-comment {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 1%;
+  width: 80%;
+  margin-left: 20%;
+}
+.vote {
+  width: 20px;
+  text-align: center;
+  padding: 8px;
+  background-color: hsl(228, 33%, 97%);
+  border-radius: 8px;
+}
+.plus,
+.minus {
+  cursor: pointer;
+}
+.numbers,
+.reply-text,
+.repliedTo {
+  font-family: "Rubik", sans-serif;
+  color: hsl(238, 40%, 52%);
+  font-weight: bold;
+}
+
+.reply button{
+    background-color: hsl(0, 0%, 100%);
+    border: 0px solid hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+
+
+.you{
+    padding: 2px 4px;
+    background-color: hsl(238, 40%, 52%) ;
+    color: hsl(0, 0%, 100%);
+    border-radius: 2px;
+}
+
+.replyComponent{
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 2%;
+    width: 100%;
+    padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.replyComponent img{
+    width: 50px;
+    height: 50px;
+}
+textarea{
+    width: 70%;
+    margin: 0 30px 20px 30px;
+    outline: none;
+    resize: none;
+    border-color: hsl(211, 10%, 45%) ;
+    border-radius: 5px;
+}
+
+.replyComponent button{
+    background-color:  hsl(238, 40%, 52%);
+    border: 1px solid  hsl(238, 40%, 52%) ;
+    padding: 12px 20px;
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.del{
+    font-family: "Rubik", sans-serif;
+  color: hsl(358, 79%, 66%) ;
+  font-weight: bold;
+}

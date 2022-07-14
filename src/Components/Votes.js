@@ -11,10 +11,11 @@ const Votes = ({score}) => {
     setCount((prev) => prev - 1);
   };
   return (
-    <div>
+    <div className="vote">
       {" "}
-      <FaPlus onClick={increaseCount} />
-      {count} <FaMinus onClick={decreaseCount} />
+      <FaPlus onClick={increaseCount} className="plus"/>
+      <p className="numbers">{count}</p> 
+      <FaMinus onClick={decreaseCount} className="minus"/>
     </div>
   );
 };

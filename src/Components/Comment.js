@@ -39,35 +39,40 @@ const Comment = React.forwardRef((props, ref) => {
   //   setEditReply(true)
   // }
   return (
-    <div>
+    <div className="comments">
+      <div className="comment">
       <Votes score={score} />
 
-      <div>
-        <UserProfile
-          profileImage={profileImage}
-          username={username}
-          createdAt={createdAt}
-          delFunc={deleteFunc}
-          // editFunc={editFunc}
-          editFunc={editComment}
-          // replyFunc={replyFunc}
-          replyFunc={replyComment}
-        />
-        {editing ? (
-          <Reply
-            inner={"Update"}
-            imageSrc={currentUser}
-            original={content}
-            func={() => {
-                updateFunc()
-                setEditing(false);
-            }}
-            ref={ref}
-          />
-        ) : (
-          <p>{content}</p>
-        )}
+<div className="commentContent">
+  <UserProfile
+    profileImage={profileImage}
+    username={username}
+    createdAt={createdAt}
+    delFunc={deleteFunc}
+    // editFunc={editFunc}
+    editFunc={editComment}
+    // replyFunc={replyFunc}
+    replyFunc={replyComment}
+  />
+  {editing ? (
+    <Reply
+      inner={"Update"}
+      imageSrc={currentUser}
+      original={content}
+      func={() => {
+          updateFunc()
+          setEditing(false);
+      }}
+      ref={ref}
+    />
+  ) : (
+    <p className="content">{content}</p>
+  )}
+  </div>
+
       </div>
+     
+      
       {/* {console.log(replies)} */}
 
       {replies.length > 0 &&

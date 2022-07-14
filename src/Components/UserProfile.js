@@ -7,23 +7,25 @@ const UserProfile = ({ profileImage, username, createdAt, delFunc, editFunc, rep
   //   console.log('hey there')
   // }
   return (
-    <div>
-      <img src={profileImage} alt={username} />
-      <p>{username}</p>
-      {username === "juliusomo" ? <span>you</span> : ""}
-      <p>{createdAt}</p>
+    <div className="userProfile">
+    <div className="profile">
+      <img src={profileImage} alt={username} className="avater" />
+      <p className="username">{username}</p>
+      {username === "juliusomo" ? <span className="you">you</span> : ""}
+      <p className="time">{createdAt}</p>
+      </div>
+      <div className="reply">  
       {username === "juliusomo" ? (
-        <div>
-          {/* <button onClick={delFunc}>
-          <FaTrash /> Delete
-          </button>  */}
-          <IconButton icon={<FaTrash />} text={"Delete"} func={delFunc}/>
-          <IconButton icon={<FaPen />} text={"Edit"} func={editFunc}/>
-          {/* <IconButton icon={<FaReply />} text={"Reply"} func={replyFunc}/> */}
-        </div>
+        <>
+          <IconButton icon={<FaTrash />} text={"Delete"} func={delFunc} cName="del"/>
+          <IconButton icon={<FaPen />} text={"Edit"} func={editFunc} cName="reply-text"/>
+          </>
+        
       ) : (
-        <IconButton icon={<FaReply />} text={"Reply"} func={replyFunc}/>
+        <IconButton icon={<FaReply />} text={"Reply"} func={replyFunc} cName="reply-text"/>
       )}
+      </div>
+    
     </div>
   );
 };

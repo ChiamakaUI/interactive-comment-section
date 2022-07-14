@@ -11,9 +11,11 @@ const CommentReply = React.forwardRef((props, ref) => {
     setResponse(true);
   };
   return (
-    <div>
+    <div className="reply-box">
+  
+       <div className="reply-comment">
       <Votes score={score} />
-      <div>
+      <div className="commentContent">
         <UserProfile
           profileImage={profileImage}
           username={username}
@@ -23,9 +25,11 @@ const CommentReply = React.forwardRef((props, ref) => {
           replyFunc={replyComment}
         />
         <p>
-          <span>{replyto}</span> {content}
+          <span className="repliedTo">{replyto}</span> {content}
         </p>
       </div>
+      </div>
+      
 
       {response && (
         <Reply
@@ -39,7 +43,9 @@ const CommentReply = React.forwardRef((props, ref) => {
           ref={ref}
         />
       )}
-    </div>
+      </div>
+      
+   
   );
 });
 

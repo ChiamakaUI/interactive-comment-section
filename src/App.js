@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Comment from "./Components/Comment";
 import Reply from "./Components/Reply";
 import currentUser from "./images/avatars/image-juliusomo.png";
+import "./Components/Styles.css"
 
 function App() {
   const commentsArray = [
@@ -189,7 +190,7 @@ function App() {
     setComments(items);
   }
   return (
-    <div>
+    <div className="page-body">
       {comments.map((ele) => (
         <Comment
           content={ele.content}
